@@ -25,7 +25,7 @@ mongo:
     storage: '2Gi'
 
 game:
-  docker_image: 'public.ecr.aws/y3z0f7y7/game'
+  docker_image: 'shubhamdevops2/game:0.0.24-2022-08-27-16-48-25-main'
   name: 'game'
   location: '/app/*'
   port: 8082
