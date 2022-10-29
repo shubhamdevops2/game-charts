@@ -9,6 +9,7 @@ SECRET: 'mysecret'
 TOLERATIONS: 'red'
 NODENAME: 'worker2' 
 SERVICENAME: 'game-service'
+DOCKER_APP_IMAGE: 'shubhamdevops2/game:0.0.24-2022-08-27-16-48-25-main'
 
 mongo:
   docker_image: 'mongo'
@@ -25,7 +26,6 @@ mongo:
     storage: '2Gi'
 
 game:
-  docker_image: 'shubhamdevops2/game:0.0.24-2022-08-27-16-48-25-main'
   name: 'game'
   location: '/app/*'
   port: 8082

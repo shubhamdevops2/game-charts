@@ -55,7 +55,7 @@ spec:
                   key: password
 
         - name: "{{ .Values.game.name }}"
-          image: "{{ .Values.game.docker_image }}"
+          image: "{{ .Values.DOCKER_APP_IMAGE }}"
           ports:
             - containerPort: {{ .Values.game.port }}
           volumeMounts:
