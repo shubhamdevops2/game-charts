@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: "game-service"
+  name: "game-service-nodeport"
 spec:
   selector:
     app: back-end-game
@@ -13,4 +13,21 @@ spec:
   - name: mongo
     port: {{ .Values.mongo.port }}
     targetPort: {{ .Values.mongo.port }}
-  type: LoadBalancer
+  type: NodePort
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: "game-service"
+spec:
+  selector:
+    app: back-end-game
+  ports:
+  - name: game
+    port: {{ .Values.game.port }}
+    targetPort: {{ .Values.game.port }}
+  - name: mongo
+    port: {{ .Values.mongo.port }}
+    targetPort: {{ .Values.mongo.port }}
