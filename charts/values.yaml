@@ -9,7 +9,7 @@ SECRET: 'mysecret'
 TOLERATIONS: 'red'
 NODENAME: 'worker2' 
 SERVICENAME: 'game-service'
-DOCKER_APP_IMAGE: shubhamdevops2/game:1.0.0-2022-10-30-13-34-55-main
+DOCKER_APP_IMAGE: shubhamdevops2/game:1.0.2-2022-10-30-20-57-17-main
 
 mongo:
   docker_image: 'mongo'
